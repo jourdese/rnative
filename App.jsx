@@ -40,19 +40,19 @@ const App = () => {
           options={{ title: 'React Native Components' }}
         />
         <Stack.Screen name="View" component={ViewScreen} />
-        {/*<Stack.Screen name="Text" component={TextScreen} />*/}
-        {/*<Stack.Screen name="Image" component={ImageScreen} />*/}
-        {/*<Stack.Screen name="ScrollView" component={ScrollViewScreen} />*/}
-        {/*<Stack.Screen name="TextInput" component={TextInputScreen} />*/}
-        {/*<Stack.Screen name="Pressable" component={PressableScreen} />*/}
-        {/*<Stack.Screen name="TouchableOpacity" component={TouchableOpacityScreen} />*/}
-        {/*<Stack.Screen name="TouchableHighlight" component={TouchableHighlightScreen} />*/}
-        {/*<Stack.Screen name="TouchableWithoutFeedback" component={TouchableWithoutFeedbackScreen} />*/}
-        {/*<Stack.Screen name="Modal" component={ModalScreen} />*/}
-        {/*<Stack.Screen name="FlatList" component={FlatListScreen} />*/}
-        {/*<Stack.Screen name="SectionList" component={SectionListScreen} />*/}
-        {/*<Stack.Screen name="ActivityIndicator" component={ActivityIndicatorScreen} />*/}
-        {/*<Stack.Screen name="Button" component={ButtonScreen} />*/}
+        <Stack.Screen name="Text" component={TextScreen} />
+        <Stack.Screen name="Image" component={ImageScreen} />
+        <Stack.Screen name="ScrollView" component={ScrollViewScreen} />
+        <Stack.Screen name="TextInput" component={TextInputScreen} />
+        <Stack.Screen name="Pressable" component={PressableScreen} />
+        <Stack.Screen name="TouchableOpacity" component={TouchableOpacityScreen} />
+        <Stack.Screen name="TouchableHighlight" component={TouchableHighlightScreen} />
+        <Stack.Screen name="TouchableWithoutFeedback" component={TouchableWithoutFeedbackScreen} />
+        <Stack.Screen name="Modal" component={ModalScreen} />
+        <Stack.Screen name="FlatList" component={FlatListScreen} />
+        <Stack.Screen name="SectionList" component={SectionListScreen} />
+        <Stack.Screen name="ActivityIndicator" component={ActivityIndicatorScreen} />
+        <Stack.Screen name="Button" component={ButtonScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

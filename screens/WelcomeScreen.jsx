@@ -15,12 +15,18 @@ const ComponentButton = ({
     const [animation] = useState(new Animated.Value(0));
 
     React.useEffect(() => {
-        Animated.timing(animation, {
+        const anim = Animated.timing(animation, {
             toValue: expanded ? 1 : 0,
             duration: animationDuration,
             useNativeDriver: false,
-        }).start();
-    }, [expanded, animationDuration]);
+        });
+        
+        anim.start();
+        
+        return () => {
+            anim.stop();
+        };
+    }, [expanded, animationDuration, animation]);
 
     const backgroundColor = animation.interpolate({
         inputRange: [0, 1],
@@ -78,13 +84,13 @@ const WelcomeScreen = ({ navigation }) => {
                     inactiveColor={index % 2 === 0 ? '#6200ee' : '#1976D2'}
                     buttonStyle={{
                         marginHorizontal: 8,
-                        borderRadius: expanded ? 16 : 12,
+                        borderRadius: expandedIndex === index ? 16 : 12,
                     }}
                     textStyle={{
-                        fontSize: expanded ? 18 : 16,
+                        fontSize: expandedIndex === index ? 18 : 16,
                     }}
                 >
-                    {expanded && (
+                    {expandedIndex === index && (
                         <Text style={styles.buttonSubtext}>Tap to learn more</Text>
                     )}
                 </ComponentButton>

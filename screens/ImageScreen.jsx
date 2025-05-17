@@ -75,7 +75,7 @@ const ImageScreen = () => {
                     <CustomImage
                         source={{ uri: 'https://picsum.photos/400' }}
                         style={styles.demoImage}
-                        loadingIndicatorSource={require('../assets/placeholder.png')}
+                        // loadingIndicatorSource={require('../assets/placeholder.png')}
                         onLoadStart={() => console.log('Loading started')}
                         onLoadEnd={() => console.log('Loading ended')}
                         onError={() => console.log('Error loading image')}
